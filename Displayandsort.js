@@ -20,14 +20,37 @@ var myObj =
 {'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
 {'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
 {'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
-{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];for(var i=0;i<myObj.length;i++){
-  if(myObj[i].occupation=="Programmer")
-  console.log(myObj[i]);
-}myObj.sort(compare);function compare(a,b){
-  return b.age-a.age;
-}console.log(myObj);function findNames(a){
-  var names=[];
-  for(var i=0;i<a.length;i++)
-  names.push(a[i].name);
-  return names;}
-  console.log(findNames(myObj));
+{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+for(var i=0;i<myObj.length;i++){
+   if(myObj[i].occupation=="Programmer")
+   {
+       console.log(myObj[i]);
+   }
+}
+myObj.sort(compare);
+function compare(a,b){
+   return b.age-a.age;
+}
+console.log(myObj);
+var teamLeader=[];
+var anotherOccupation=[];
+for(var i=0;i<myObj.length;i++){
+   if(myObj[i].occupation=="Team Leader")
+   {
+       teamLeader.push(myObj[i]);
+   }else{
+       anotherOccupation.push(myObj[i]);
+   }
+}
+console.log(teamLeader);
+console.log(anotherOccupation);
+// function findNames(a){
+//     var names=[];
+//     for(var i=0;i<a.length;i++)
+//     names.push(a[i].name);
+//     return names;// }// console.log(findNames(myObj));
+var n = myObj.map(function(obj) {
+   return obj.name;
+ });
+console.log(n);
+    
